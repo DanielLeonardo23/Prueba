@@ -1,0 +1,189 @@
+PREGUNTAS - MACHINE LEARNING SUPERVISADO
+
+=== PREGUNTAS DE OPCIÓN MÚLTIPLE ===
+
+1. ¿Cuál es la primera fase del ciclo de vida de ML supervisado?
+a) Recolección de datos
+b) Definición del problema
+c) Preparación de datos
+d) Selección del modelo
+Respuesta: b) Definición del problema
+
+2. ¿Qué porcentaje de datos se recomienda típicamente para entrenamiento?
+a) 50-60%
+b) 60-70%
+c) 70-80%
+d) 80-90%
+Respuesta: c) 70-80%
+
+3. ¿Cuál es el propósito principal de un Pipeline en ML?
+a) Acelerar el entrenamiento
+b) Reducir el tamaño de los datos
+c) Mantener reproducibilidad y orden de pasos
+d) Aumentar la precisión del modelo
+Respuesta: c) Mantener reproducibilidad y orden de pasos
+
+4. ¿Qué técnica se usa para balancear clases desbalanceadas?
+a) PCA
+b) SMOTE
+c) Grid Search
+d) Cross Validation
+Respuesta: b) SMOTE
+
+5. ¿Cuál es la diferencia principal entre Grid Search y Random Search?
+a) Grid Search es más rápido
+b) Random Search es más preciso
+c) Grid Search prueba todas las combinaciones, Random Search prueba aleatorias
+d) No hay diferencia
+Respuesta: c) Grid Search prueba todas las combinaciones, Random Search prueba aleatorias
+
+6. ¿En qué fase se serializa el modelo?
+a) Entrenamiento
+b) Evaluación
+c) Optimización
+d) Implementación
+Respuesta: d) Implementación
+
+7. ¿Qué significa MLOps?
+a) Machine Learning Operations
+b) Multiple Learning Options
+c) Model Learning Optimization
+d) Machine Logic Operations
+Respuesta: a) Machine Learning Operations
+
+8. ¿Cuál es el objetivo de la validación cruzada?
+a) Acelerar el entrenamiento
+b) Reducir overfitting
+c) Estimar rendimiento de forma robusta
+d) Aumentar el tamaño del dataset
+Respuesta: c) Estimar rendimiento de forma robusta
+
+9. ¿Qué se debe hacer con outliers que son errores?
+a) Mantenerlos
+b) Corregirlos
+c) Eliminarlos
+d) Duplicarlos
+Respuesta: b) Corregirlos
+
+10. ¿Cuál es la función de train_test_split?
+a) Entrenar el modelo
+b) Dividir datos en entrenamiento y prueba
+c) Evaluar el modelo
+d) Optimizar hiperparámetros
+Respuesta: b) Dividir datos en entrenamiento y prueba
+
+11. ¿Qué parámetro asegura reproducibilidad en train_test_split?
+a) test_size
+b) stratify
+c) random_state
+d) shuffle
+Respuesta: c) random_state
+
+12. ¿Cuál es el propósito de la fase de mantenimiento?
+a) Entrenar nuevos modelos
+b) Recolectar más datos
+c) Monitorear y actualizar el modelo en producción
+d) Evaluar métricas
+Respuesta: c) Monitorear y actualizar el modelo en producción
+
+13. ¿Qué es el data drift?
+a) Cambios en los datos de entrada
+b) Errores en el modelo
+c) Pérdida de datos
+d) Aumento del dataset
+Respuesta: a) Cambios en los datos de entrada
+
+14. ¿Cuál es la ventaja principal de usar pipelines?
+a) Mayor velocidad
+b) Menor uso de memoria
+c) Evitar errores manuales y mantener consistencia
+d) Mejor precisión
+Respuesta: c) Evitar errores manuales y mantener consistencia
+
+15. ¿Qué significa "concept drift"?
+a) Cambio en la distribución de datos
+b) Cambio en la relación entre variables y target
+c) Error en el modelo
+d) Pérdida de precisión
+Respuesta: b) Cambio en la relación entre variables y target
+
+16. ¿Cuál es el objetivo del reentrenamiento?
+a) Crear un nuevo modelo
+b) Mantener o mejorar rendimiento ante cambios
+c) Reducir el tamaño del modelo
+d) Acelerar las predicciones
+Respuesta: b) Mantener o mejorar rendimiento ante cambios
+
+17. ¿Qué es shadow deployment?
+a) Entrenar en paralelo
+b) Validar en producción sin afectar sistema activo
+c) Crear copias del modelo
+d) Ocultar el modelo
+Respuesta: b) Validar en producción sin afectar sistema activo
+
+18. ¿Cuál es la diferencia entre parámetros e hiperparámetros?
+a) No hay diferencia
+b) Parámetros se aprenden automáticamente, hiperparámetros se configuran
+c) Hiperparámetros se aprenden automáticamente, parámetros se configuran
+d) Ambos se configuran manualmente
+Respuesta: b) Parámetros se aprenden automáticamente, hiperparámetros se configuran
+
+19. ¿Qué formato se recomienda para serializar modelos?
+a) .txt
+b) .csv
+c) .pkl o .joblib
+d) .json
+Respuesta: c) .pkl o .joblib
+
+20. ¿Cuál es el propósito de A/B testing en ML?
+a) Entrenar dos modelos
+b) Comparar rendimiento de modelos en producción
+c) Dividir los datos
+d) Acelerar el entrenamiento
+Respuesta: b) Comparar rendimiento de modelos en producción
+
+21. ¿Qué significa "feature engineering"?
+a) Crear nuevas características a partir de datos existentes
+b) Eliminar características
+c) Normalizar datos
+d) Dividir el dataset
+Respuesta: a) Crear nuevas características a partir de datos existentes
+
+22. ¿Cuándo usar Label Encoding vs One-Hot Encoding?
+a) Siempre usar Label Encoding
+b) Label para ordinales, One-Hot para nominales
+c) Siempre usar One-Hot
+d) No hay diferencia
+Respuesta: b) Label para ordinales, One-Hot para nominales
+
+=== PREGUNTAS VERDADERO/FALSO ===
+
+1. Es recomendable usar el conjunto de prueba durante el entrenamiento del modelo.
+Respuesta: FALSO - El conjunto de prueba debe mantenerse separado para evaluar generalización
+
+2. SMOTE es una técnica para balancear clases desbalanceadas.
+Respuesta: VERDADERO - Aumenta la clase minoritaria con registros sintéticos
+
+3. Grid Search prueba todas las combinaciones posibles de hiperparámetros definidos.
+Respuesta: VERDADERO - A diferencia de Random Search que prueba combinaciones aleatorias
+
+4. La validación cruzada se debe usar siempre que se realice tuning de hiperparámetros.
+Respuesta: VERDADERO - Proporciona estimación más robusta del rendimiento
+
+5. Los pipelines solo sirven para acelerar el entrenamiento.
+Respuesta: FALSO - Su propósito principal es mantener reproducibilidad y orden
+
+6. El conjunto de entrenamiento debe ser menor que el de prueba.
+Respuesta: FALSO - Se recomienda 70-80% para entrenamiento, 20-30% para prueba
+
+7. La fase de mantenimiento es opcional en proyectos de ML.
+Respuesta: FALSO - Es fundamental para mantener el modelo funcionando correctamente
+
+8. Los outliers siempre deben eliminarse de los datos.
+Respuesta: FALSO - Depende si son errores, anomalías o datos relevantes
+
+9. La serialización del modelo ocurre en la fase de implementación.
+Respuesta: VERDADERO - Se guarda en formato portable para reutilización
+
+10. Random Search es siempre mejor que Grid Search.
+Respuesta: FALSO - Grid Search es exhaustivo, Random Search es más eficiente con muchos hiperparámetros

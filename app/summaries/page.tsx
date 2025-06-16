@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, BookOpen, Target, Brain, BarChart3, CheckCircle, AlertCircle, Info } from "lucide-react"
+import { ArrowLeft, BookOpen, Target, Brain, BarChart3, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
 
 const summaryData = {
@@ -13,6 +13,13 @@ const summaryData = {
     title: "Machine Learning Supervisado",
     icon: Target,
     color: "bg-blue-500",
+    keyPoints: [
+      "Proceso sistemático de 10 fases para desarrollar modelos que aprenden de datos etiquetados",
+      "Requiere datos con variable objetivo (etiqueta) conocida",
+      "División típica: 70-80% entrenamiento, 20-30% prueba",
+      "Uso de pipelines para mantener reproducibilidad",
+      "Validación cruzada para estimación robusta del rendimiento",
+    ],
     phases: [
       {
         phase: "1. Definición del Problema",
@@ -23,7 +30,6 @@ const summaryData = {
           "Identificar variables de entrada (features)",
           "Establecer métricas de éxito",
         ],
-        example: "Universidad quiere predecir deserción estudiantil → Clasificación binaria (deserta/no deserta)",
       },
       {
         phase: "2. Recolección de Datos",
@@ -34,7 +40,6 @@ const summaryData = {
           "Asegurar volumen y representatividad",
           "Documentar origen y tipo de datos",
         ],
-        example: "Sistema académico, registros admisión, 250,000 registros de 10 años",
       },
       {
         phase: "3. Preparación de Datos",
@@ -43,9 +48,8 @@ const summaryData = {
           "Limpieza: valores nulos/inconsistentes",
           "Transformación: categóricas → numéricas",
           "Escalado/normalización si necesario",
-          "Análisis exploratorio: correlaciones, outliers, desbalance",
+          "SMOTE para balancear clases",
         ],
-        example: "SMOTE para balancear clases, One-Hot Encoding para categorías",
       },
       {
         phase: "4. División del Conjunto",
@@ -56,7 +60,6 @@ const summaryData = {
           "Mantener proporcionalidad de clases",
           "Usar train_test_split con stratify",
         ],
-        example: "80% entrenamiento, 20% prueba, random_state=42",
       },
       {
         phase: "5. Selección del Modelo",
@@ -67,62 +70,17 @@ const summaryData = {
           "Necesidad de interpretabilidad",
           "Recursos computacionales",
         ],
-        example: "Random Forest para datos mixtos, SVM para alta dimensión",
       },
       {
-        phase: "6. Entrenamiento",
-        key: "Ajustar parámetros internos",
+        phase: "6-10. Entrenamiento → Mantenimiento",
+        key: "Desde ajuste hasta producción",
         details: [
-          "Usar conjunto de entrenamiento",
-          "modelo.fit(X_train, y_train)",
-          "El modelo aprende patrones",
-          "Construye función predictiva",
+          "Entrenamiento: modelo.fit(X_train, y_train)",
+          "Evaluación con datos de prueba",
+          "Optimización: Grid/Random Search",
+          "Implementación: serialización y API",
+          "Mantenimiento: monitoreo y reentrenamiento",
         ],
-        example: "LogisticRegression().fit(X_train, y_train)",
-      },
-      {
-        phase: "7. Evaluación",
-        key: "Medir rendimiento con datos de prueba",
-        details: [
-          "Usar conjunto de prueba no visto",
-          "Calcular métricas definidas en Fase 1",
-          "Comparar diferentes modelos",
-          "Identificar sobreajuste/subajuste",
-        ],
-        example: "Accuracy, Precision, Recall, F1-score, Confusion Matrix",
-      },
-      {
-        phase: "8. Optimización",
-        key: "Ajustar hiperparámetros",
-        details: [
-          "Grid Search: todas las combinaciones",
-          "Random Search: combinaciones aleatorias",
-          "Usar validación cruzada",
-          "Encontrar mejor configuración",
-        ],
-        example: "GridSearchCV con cv=5 para Random Forest",
-      },
-      {
-        phase: "9. Implementación",
-        key: "Desplegar modelo en producción",
-        details: [
-          "Serialización del modelo (.pkl)",
-          "Crear API (Flask, FastAPI)",
-          "Integrar con sistemas existentes",
-          "Testing en producción (A/B)",
-        ],
-        example: "joblib.dump(model, 'modelo.pkl'), API REST",
-      },
-      {
-        phase: "10. Mantenimiento",
-        key: "Monitoreo y actualización continua",
-        details: [
-          "Monitoreo de rendimiento",
-          "Reentrenamiento periódico",
-          "Validación continua",
-          "Gestión de versiones (MLOps)",
-        ],
-        example: "Alertas automáticas, drift detection, CI/CD",
       },
     ],
   },
@@ -130,6 +88,13 @@ const summaryData = {
     title: "Machine Learning No Supervisado",
     icon: Brain,
     color: "bg-green-500",
+    keyPoints: [
+      "Descubre patrones ocultos en datos sin etiquetas",
+      "3 técnicas principales: Clustering, Reducción de dimensionalidad, Reglas de asociación",
+      "Evaluación más subjetiva que ML supervisado",
+      "Algoritmos de caja blanca (interpretables) vs caja negra",
+      "Aplicaciones: segmentación, visualización, recomendaciones",
+    ],
     techniques: [
       {
         name: "Clustering (Agrupamiento)",
@@ -204,6 +169,13 @@ const summaryData = {
     title: "Métricas de Evaluación",
     icon: BarChart3,
     color: "bg-purple-500",
+    keyPoints: [
+      "Métricas específicas para evaluar algoritmos no supervisados",
+      "Diferentes rangos e interpretaciones según la técnica",
+      "Coeficiente de Silueta: métrica principal para clustering",
+      "Varianza Explicada: clave para reducción de dimensionalidad",
+      "Soporte, Confianza y Lift: fundamentales en reglas de asociación",
+    ],
     categories: [
       {
         name: "Métricas de Clustering",
@@ -324,9 +296,20 @@ export default function SummariesPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Proceso sistemático de 10 fases para desarrollar modelos que aprenden de datos etiquetados.
-                </p>
+                {/* Puntos Clave */}
+                <div className="mb-6">
+                  <h3 className="font-semibold text-blue-700 mb-3">📋 Puntos Clave:</h3>
+                  <div className="space-y-2">
+                    {summaryData.supervised.keyPoints.map((point, index) => (
+                      <div key={index} className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-gray-700">{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Fases */}
                 <div className="grid gap-4">
                   {summaryData.supervised.phases.map((phase, index) => (
                     <Card key={index} className="border-l-4 border-l-blue-500">
@@ -337,29 +320,14 @@ export default function SummariesPage() {
                         </div>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        <div className="grid md:grid-cols-2 gap-4">
-                          <div>
-                            <h4 className="font-semibold mb-2 flex items-center gap-1">
-                              <CheckCircle className="w-4 h-4 text-green-600" />
-                              Actividades clave:
-                            </h4>
-                            <ul className="space-y-1 text-sm">
-                              {phase.details.map((detail, i) => (
-                                <li key={i} className="flex items-start gap-2">
-                                  <span className="text-blue-500 mt-1">•</span>
-                                  {detail}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold mb-2 flex items-center gap-1">
-                              <Info className="w-4 h-4 text-blue-600" />
-                              Ejemplo:
-                            </h4>
-                            <p className="text-sm text-gray-600 bg-blue-50 p-3 rounded">{phase.example}</p>
-                          </div>
-                        </div>
+                        <ul className="space-y-1 text-sm">
+                          {phase.details.map((detail, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="text-blue-500 mt-1">•</span>
+                              {detail}
+                            </li>
+                          ))}
+                        </ul>
                       </CardContent>
                     </Card>
                   ))}
@@ -378,10 +346,18 @@ export default function SummariesPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Descubre patrones ocultos en datos sin etiquetas mediante clustering, reducción de dimensionalidad y
-                  reglas de asociación.
-                </p>
+                {/* Puntos Clave */}
+                <div className="mb-6">
+                  <h3 className="font-semibold text-green-700 mb-3">📋 Puntos Clave:</h3>
+                  <div className="space-y-2">
+                    {summaryData.unsupervised.keyPoints.map((point, index) => (
+                      <div key={index} className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-gray-700">{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 {/* Condiciones de uso */}
                 <Card className="mb-6 bg-green-50">
@@ -444,9 +420,18 @@ export default function SummariesPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-6">
-                  Métricas específicas para evaluar la calidad de algoritmos de ML no supervisado.
-                </p>
+                {/* Puntos Clave */}
+                <div className="mb-6">
+                  <h3 className="font-semibold text-purple-700 mb-3">📋 Puntos Clave:</h3>
+                  <div className="space-y-2">
+                    {summaryData.metrics.keyPoints.map((point, index) => (
+                      <div key={index} className="flex items-start gap-2">
+                        <CheckCircle className="w-4 h-4 text-purple-600 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-gray-700">{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
 
                 <div className="space-y-6">
                   {summaryData.metrics.categories.map((category, index) => (

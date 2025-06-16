@@ -1,0 +1,189 @@
+PREGUNTAS - MACHINE LEARNING NO SUPERVISADO
+
+=== PREGUNTAS DE OPCIÓN MÚLTIPLE ===
+
+1. ¿Cuáles son las 3 principales técnicas de ML no supervisado?
+a) Clasificación, Regresión, Clustering
+b) Clustering, Reducción de dimensionalidad, Reglas de asociación
+c) PCA, SVM, Random Forest
+d) Supervisado, Semi-supervisado, Reforzado
+Respuesta: b) Clustering, Reducción de dimensionalidad, Reglas de asociación
+
+2. ¿Cuál NO es una condición para usar ML no supervisado?
+a) Datos sin etiquetar
+b) Exploración de patrones
+c) Datos etiquetados disponibles
+d) Necesidad de reducir complejidad
+Respuesta: c) Datos etiquetados disponibles
+
+3. ¿Qué algoritmo es mejor para detectar clusters de forma arbitraria?
+a) K-Means
+b) DBSCAN
+c) PCA
+d) Apriori
+Respuesta: b) DBSCAN
+
+4. ¿Cuál es la característica principal de K-Means?
+a) Detecta outliers
+b) Divide en k clusters con centroides
+c) Reduce dimensionalidad
+d) Encuentra reglas de asociación
+Respuesta: b) Divide en k clusters con centroides
+
+5. ¿Qué hace PCA principalmente?
+a) Agrupa datos similares
+b) Detecta anomalías
+c) Reduce dimensiones manteniendo varianza
+d) Encuentra reglas
+Respuesta: c) Reduce dimensiones manteniendo varianza
+
+6. ¿Cuál es la diferencia entre t-SNE y PCA?
+a) No hay diferencia
+b) t-SNE es lineal, PCA no lineal
+c) PCA es lineal, t-SNE no lineal
+d) Ambos son no lineales
+Respuesta: c) PCA es lineal, t-SNE no lineal
+
+7. ¿Qué algoritmo se usa para reglas de asociación?
+a) K-Means
+b) DBSCAN
+c) Apriori
+d) PCA
+Respuesta: c) Apriori
+
+8. ¿K-Means es un algoritmo de caja blanca o negra?
+a) Caja negra
+b) Caja blanca
+c) Depende de los datos
+d) No se puede clasificar
+Respuesta: b) Caja blanca
+
+9. ¿Cuál es el uso típico de DBSCAN?
+a) Segmentación de clientes
+b) Detección de anomalías y clusters arbitrarios
+c) Visualización 2D
+d) Market basket analysis
+Respuesta: b) Detección de anomalías y clusters arbitrarios
+
+10. ¿Qué son los GANs?
+a) Algoritmo de clustering
+b) Técnica de reducción
+c) Redes generativas adversarias
+d) Método de asociación
+Respuesta: c) Redes generativas adversarias
+
+11. ¿UMAP es una técnica de qué tipo?
+a) Clustering
+b) Reducción de dimensionalidad
+c) Reglas de asociación
+d) Clasificación
+Respuesta: b) Reducción de dimensionalidad
+
+12. ¿Cuál es la ventaja de los Autoencoders?
+a) Son interpretables
+b) Aprenden representaciones comprimidas
+c) Son muy rápidos
+d) No necesitan datos
+Respuesta: b) Aprenden representaciones comprimidas
+
+13. ¿Qué preserva t-SNE principalmente?
+a) Varianza global
+b) Relaciones lineales
+c) Relaciones locales
+d) Todas las distancias
+Respuesta: c) Relaciones locales
+
+14. ¿Los mapas autoorganizados (SOM) son de qué tipo?
+a) Caja blanca
+b) Caja negra
+c) Híbrido
+d) No clasificable
+Respuesta: b) Caja negra
+
+15. ¿Cuál es el objetivo principal del clustering jerárquico?
+a) Encontrar k clusters
+b) Crear jerarquía de agrupaciones
+c) Reducir dimensiones
+d) Detectar outliers
+Respuesta: b) Crear jerarquía de agrupaciones
+
+16. ¿Qué tipo de datos requiere el ML no supervisado?
+a) Solo datos etiquetados
+b) Solo características de entrada (X)
+c) Datos etiquetados y no etiquetados
+d) Solo datos de salida (y)
+Respuesta: b) Solo características de entrada (X)
+
+17. ¿Cuál es una aplicación típica de las reglas de asociación?
+a) Segmentación de clientes
+b) Reducción de dimensionalidad
+c) Market basket analysis
+d) Detección de anomalías
+Respuesta: c) Market basket analysis
+
+18. ¿Qué algoritmo NO es de caja blanca?
+a) K-Means
+b) PCA
+c) Apriori
+d) Autoencoders
+Respuesta: d) Autoencoders
+
+19. ¿DBSCAN requiere especificar el número de clusters?
+a) Sí, siempre
+b) No, los encuentra automáticamente
+c) Solo a veces
+d) Depende de los datos
+Respuesta: b) No, los encuentra automáticamente
+
+20. ¿Cuál es la principal ventaja de usar algoritmos de caja blanca?
+a) Mayor precisión
+b) Menor tiempo de cómputo
+c) Interpretabilidad
+d) Menos datos requeridos
+Respuesta: c) Interpretabilidad
+
+21. ¿Qué significa que un algoritmo sea "no paramétrico"?
+a) No tiene parámetros
+b) No asume distribución específica de datos
+c) Es muy rápido
+d) Es interpretable
+Respuesta: b) No asume distribución específica de datos
+
+22. ¿Los GANs se usan principalmente para?
+a) Clustering
+b) Reducción de dimensionalidad
+c) Generación de datos sintéticos
+d) Reglas de asociación
+Respuesta: c) Generación de datos sintéticos
+
+=== PREGUNTAS VERDADERO/FALSO ===
+
+1. K-Means es un algoritmo de caja negra.
+Respuesta: FALSO - Es de caja blanca porque es interpretable
+
+2. El ML no supervisado requiere datos etiquetados.
+Respuesta: FALSO - Trabaja únicamente con características de entrada
+
+3. DBSCAN puede encontrar clusters de forma arbitraria.
+Respuesta: VERDADERO - A diferencia de K-Means que asume clusters esféricos
+
+4. PCA siempre preserva el 100% de la información.
+Respuesta: FALSO - Reduce dimensionalidad con pérdida controlada de información
+
+5. t-SNE es mejor que PCA para visualización.
+Respuesta: VERDADERO - Preserva mejor las relaciones locales para visualización
+
+6. Los Autoencoders son algoritmos de caja blanca.
+Respuesta: FALSO - Son redes neuronales, por tanto caja negra
+
+7. El algoritmo Apriori se usa para clustering.
+Respuesta: FALSO - Se usa para encontrar reglas de asociación
+
+8. UMAP puede usarse tanto para reducción como visualización.
+Respuesta: VERDADERO - Es versátil para ambos propósitos
+
+9. Los GANs requieren datos etiquetados para funcionar.
+Respuesta: FALSO - Son técnicas no supervisadas
+
+10. El clustering jerárquico siempre produce el mismo número de clusters que K-Means.
+Respuesta: FALSO - Produce una jerarquía que puede cortarse en diferentes niveles

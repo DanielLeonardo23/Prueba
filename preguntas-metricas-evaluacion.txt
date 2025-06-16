@@ -1,0 +1,189 @@
+PREGUNTAS - MÉTRICAS DE EVALUACIÓN ML NO SUPERVISADO
+
+=== PREGUNTAS DE OPCIÓN MÚLTIPLE ===
+
+1. ¿Cuál es el rango del Coeficiente de Silueta?
+a) [0, 1]
+b) [-1, 1]
+c) [0, ∞)
+d) [-∞, ∞)
+Respuesta: b) [-1, 1]
+
+2. ¿Qué indica un Coeficiente de Silueta cercano a 1?
+a) Mala asignación de clusters
+b) Buena asignación de clusters
+c) Clusters solapados
+d) Datos ruidosos
+Respuesta: b) Buena asignación de clusters
+
+3. ¿Cuál es el rango del Índice Calinski-Harabasz?
+a) [-1, 1]
+b) [0, 1]
+c) [0, ∞)
+d) [-∞, ∞)
+Respuesta: c) [0, ∞)
+
+4. ¿Qué indican valores altos en el Índice Calinski-Harabasz?
+a) Peor clustering
+b) Mejor clustering
+c) Más ruido
+d) Menos clusters
+Respuesta: b) Mejor clustering
+
+5. ¿Cuál es el rango del Índice Davies-Bouldin?
+a) [-1, 1]
+b) [0, 1]
+c) [0, ∞)
+d) [-∞, ∞)
+Respuesta: c) [0, ∞)
+
+6. ¿Qué indican valores bajos en el Índice Davies-Bouldin?
+a) Peor separación entre clusters
+b) Mejor separación entre clusters
+c) Más solapamiento
+d) Datos más ruidosos
+Respuesta: b) Mejor separación entre clusters
+
+7. ¿Qué mide el Error de Reconstrucción en PCA?
+a) Calidad de clustering
+b) Pérdida de información al reducir dimensiones
+c) Número de componentes
+d) Velocidad del algoritmo
+Respuesta: b) Pérdida de información al reducir dimensiones
+
+8. ¿Cuál es el rango de la Varianza Explicada?
+a) [-1, 1]
+b) [0, 1]
+c) [0, ∞)
+d) [-∞, ∞)
+Respuesta: b) [0, 1]
+
+9. ¿Qué mide el Soporte en reglas de asociación?
+a) Fuerza de la regla
+b) Frecuencia del conjunto de elementos
+c) Mejora sobre probabilidad base
+d) Correlación entre elementos
+Respuesta: b) Frecuencia del conjunto de elementos
+
+10. ¿Cuál es el rango del Soporte?
+a) [-1, 1]
+b) [0, 1]
+c) [0, ∞)
+d) [-∞, ∞)
+Respuesta: b) [0, 1]
+
+11. ¿Qué mide la Confianza en reglas de asociación?
+a) Frecuencia del conjunto
+b) Probabilidad condicional P(B|A)
+c) Mejora sobre probabilidad base
+d) Correlación total
+Respuesta: b) Probabilidad condicional P(B|A)
+
+12. ¿Cuál es el rango de la Confianza?
+a) [-1, 1]
+b) [0, 1]
+c) [0, ∞)
+d) [-∞, ∞)
+Respuesta: b) [0, 1]
+
+13. ¿Qué indica un Lift = 1 en reglas de asociación?
+a) Asociación positiva fuerte
+b) Asociación negativa
+c) Independencia entre elementos
+d) Error en el cálculo
+Respuesta: c) Independencia entre elementos
+
+14. ¿Qué indica un Lift > 1?
+a) Asociación negativa
+b) Asociación positiva
+c) Independencia
+d) Error en los datos
+Respuesta: b) Asociación positiva
+
+15. ¿Cuál es el rango del Lift?
+a) [-1, 1]
+b) [0, 1]
+c) [0, ∞)
+d) [-∞, ∞)
+Respuesta: c) [0, ∞)
+
+16. ¿Qué métrica se usa principalmente para evaluar la calidad de clusters?
+a) Error de Reconstrucción
+b) Coeficiente de Silueta
+c) Varianza Explicada
+d) Lift
+Respuesta: b) Coeficiente de Silueta
+
+17. ¿Qué métrica ayuda a determinar el número de componentes en PCA?
+a) Coeficiente de Silueta
+b) Índice Davies-Bouldin
+c) Varianza Explicada
+d) Confianza
+Respuesta: c) Varianza Explicada
+
+18. ¿Cuál es la fórmula del Coeficiente de Silueta?
+a) (a(i) - b(i)) / max(a(i), b(i))
+b) (b(i) - a(i)) / max(a(i), b(i))
+c) (a(i) + b(i)) / max(a(i), b(i))
+d) (a(i) * b(i)) / max(a(i), b(i))
+Respuesta: b) (b(i) - a(i)) / max(a(i), b(i))
+
+19. ¿Qué representa 'a(i)' en el Coeficiente de Silueta?
+a) Distancia promedio a puntos del mismo cluster
+b) Distancia promedio al cluster más cercano
+c) Número de clusters
+d) Centroide del cluster
+Respuesta: a) Distancia promedio a puntos del mismo cluster
+
+20. ¿Qué representa 'b(i)' en el Coeficiente de Silueta?
+a) Distancia promedio a puntos del mismo cluster
+b) Distancia promedio al cluster más cercano
+c) Número total de puntos
+d) Distancia al centroide
+Respuesta: b) Distancia promedio al cluster más cercano
+
+21. ¿Para qué se usa el Leverage en reglas de asociación?
+a) Medir frecuencia
+b) Medir diferencia entre frecuencia observada y esperada
+c) Calcular probabilidad
+d) Determinar número de reglas
+Respuesta: b) Medir diferencia entre frecuencia observada y esperada
+
+22. ¿Qué métrica combina Soporte y Confianza?
+a) Lift
+b) Leverage
+c) Conviction
+d) Todas las anteriores
+Respuesta: d) Todas las anteriores
+
+=== PREGUNTAS VERDADERO/FALSO ===
+
+1. El Coeficiente de Silueta puede tener valores negativos.
+Respuesta: VERDADERO - Su rango es [-1, 1], valores negativos indican mala asignación
+
+2. Valores altos en el Índice Davies-Bouldin indican mejor clustering.
+Respuesta: FALSO - Valores bajos indican mejor separación entre clusters
+
+3. La Varianza Explicada en PCA siempre debe ser 100%.
+Respuesta: FALSO - Se busca un balance entre reducción y preservación de información
+
+4. El Error de Reconstrucción menor indica mejor preservación de información.
+Respuesta: VERDADERO - Menor error significa menos pérdida de información
+
+5. Un Lift menor a 1 indica asociación negativa.
+Respuesta: VERDADERO - Valores menores a 1 indican asociación negativa
+
+6. El Soporte mide la fuerza de una regla de asociación.
+Respuesta: FALSO - El Soporte mide frecuencia, la Confianza mide fuerza
+
+7. La Confianza es una probabilidad condicional.
+Respuesta: VERDADERO - Mide P(B|A) en reglas A→B
+
+8. El Índice Calinski-Harabasz se usa para evaluar reducción de dimensionalidad.
+Respuesta: FALSO - Se usa para evaluar calidad de clustering
+
+9. Todas las métricas de clustering tienen el mismo rango.
+Respuesta: FALSO - Tienen rangos diferentes: Silueta [-1,1], Calinski-Harabasz [0,∞), etc.
+
+10. El Lift = 1 indica una regla de asociación muy fuerte.
+Respuesta: FALSO - Lift = 1 indica independencia entre elementos
