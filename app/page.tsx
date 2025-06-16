@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { FileText, BookOpen, Brain, Target, BarChart3 } from "lucide-react"
+import { FileText, BookOpen, Brain, Target, BarChart3, Sparkles } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -12,11 +12,11 @@ export default function HomePage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">🧠 ML Study Master</h1>
-          <p className="text-xl text-gray-600">Domina Machine Learning con cuestionarios y resúmenes</p>
+          <p className="text-xl text-gray-600">Domina Machine Learning con cuestionarios, resúmenes y IA</p>
         </div>
 
         {/* Main Tools */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Cuestionarios */}
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader className="text-center">
@@ -25,17 +25,39 @@ export default function HomePage() {
                   <FileText className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <CardTitle className="text-2xl">Cuestionarios</CardTitle>
-              <CardDescription className="text-lg">Preguntas aleatorias de los 3 PDFs</CardDescription>
+              <CardTitle className="text-xl">Cuestionarios</CardTitle>
+              <CardDescription>150 preguntas aleatorias</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-gray-600 mb-6">
-                Más de 30 preguntas aleatorias extraídas directamente de los PDFs de Machine Learning. Filtra por
-                categoría o practica con todas mezcladas.
+              <p className="text-gray-600 mb-4 text-sm">
+                Más de 150 preguntas extraídas de los PDFs. Filtra por categoría y tipo de pregunta.
               </p>
               <Link href="/quiz">
-                <Button size="lg" className="w-full">
-                  Comenzar Cuestionario
+                <Button size="sm" className="w-full">
+                  Comenzar Quiz
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
+
+          {/* Preguntas IA */}
+          <Card className="hover:shadow-lg transition-shadow border-purple-200">
+            <CardHeader className="text-center">
+              <div className="flex justify-center mb-4">
+                <div className="p-4 rounded-full bg-purple-500">
+                  <Sparkles className="w-8 h-8 text-white" />
+                </div>
+              </div>
+              <CardTitle className="text-xl">Preguntas IA</CardTitle>
+              <CardDescription>Generadas con Gemini</CardDescription>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-gray-600 mb-4 text-sm">
+                Preguntas únicas generadas por IA con formato ABCDE y explicaciones detalladas.
+              </p>
+              <Link href="/ai-questions">
+                <Button size="sm" className="w-full bg-purple-600 hover:bg-purple-700">
+                  Generar con IA
                 </Button>
               </Link>
             </CardContent>
@@ -49,16 +71,15 @@ export default function HomePage() {
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <CardTitle className="text-2xl">Resúmenes</CardTitle>
-              <CardDescription className="text-lg">Conceptos clave de los PDFs organizados</CardDescription>
+              <CardTitle className="text-xl">Resúmenes</CardTitle>
+              <CardDescription>Contenido completo</CardDescription>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-gray-600 mb-6">
-                Resúmenes estructurados con lo más importante de cada PDF: ML Supervisado, ML No Supervisado y Métricas
-                de Evaluación.
+              <p className="text-gray-600 mb-4 text-sm">
+                Resúmenes extensos con organizadores gráficos y ejemplos prácticos.
               </p>
               <Link href="/summaries">
-                <Button size="lg" className="w-full" variant="outline">
+                <Button size="sm" className="w-full" variant="outline">
                   Ver Resúmenes
                 </Button>
               </Link>
@@ -67,7 +88,7 @@ export default function HomePage() {
         </div>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <Card className="text-center">
             <CardContent className="pt-6">
               <div className="flex justify-center mb-2">
@@ -91,8 +112,17 @@ export default function HomePage() {
               <div className="flex justify-center mb-2">
                 <BarChart3 className="w-6 h-6 text-purple-600" />
               </div>
-              <div className="text-2xl font-bold text-purple-600">30+</div>
-              <div className="text-sm text-gray-600">Preguntas Aleatorias</div>
+              <div className="text-2xl font-bold text-purple-600">150</div>
+              <div className="text-sm text-gray-600">Preguntas Totales</div>
+            </CardContent>
+          </Card>
+          <Card className="text-center">
+            <CardContent className="pt-6">
+              <div className="flex justify-center mb-2">
+                <Sparkles className="w-6 h-6 text-purple-600" />
+              </div>
+              <div className="text-2xl font-bold text-purple-600">∞</div>
+              <div className="text-sm text-gray-600">Preguntas IA</div>
             </CardContent>
           </Card>
         </div>
